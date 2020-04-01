@@ -24,6 +24,8 @@ namespace FootballPopup.Controllers
 
         public string Welcome(string name, int numTimes = 1)
         {
+            ////Security Note: The code above uses HttpUtility.HtmlEncode to protect the application from malicious input (namely JavaScript). 
+            ////For more information see How to: Protect Against Script Exploits in a Web Application by Applying HTML Encoding to Strings.
             return HttpUtility.HtmlEncode("Hello " + name + ", NumTimes is: " + numTimes);
         }
 
